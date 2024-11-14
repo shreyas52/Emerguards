@@ -1,0 +1,451 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Update the CSS for aligning the logo to the center */
+.logo {
+  width: 100%;
+  margin-left: 100px;
+}
+
+.logo img {
+  max-width: 10%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+}
+.login-icon {
+  padding-right: 50px; /* Adjust the margin to control spacing */
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+/* Style the login icon (adjust as needed) */
+.login-icon i {
+  font-size: 24px;
+}
+
+.navbar {
+  background-color: #282a3a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.navbar button {
+  margin-right: 20px;
+  font-weight: bold;
+  width: 10%;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border-width: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body {
+  background-color: #3085c3; /* Set the background color for the entire page */
+  justify-content: space-between;
+  text-align: center;
+  align-items: center; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.sidebar {
+  position: absolute;
+  height: 100%;
+  background-color: #0c356a;
+  width: 20%; /* Set the width to 20% of the screen */
+  color: rgb(255, 255, 255); /* Fix the position to the left */
+  align-items: center;
+}
+.sidecontent {
+  margin-top: 40px;
+  width: 100%;
+  background-color: transparent;
+}
+.sidebar button {
+  font-weight: bold;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-shadow: 1px 1px 2px blue;
+  text-decoration: none;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Align text to the left */
+  align-items: center; /* Vertically center the text and any icons */
+  border: none; /* Remove the border */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a transition effect */
+  outline: none; /* Remove the default focus outline */
+}
+
+.sidebar button:hover {
+  font-size: 14px;
+  background-color: #ffc436; /* Change background color on hover */
+  box-shadow: 1px 1px 5px 1px blue;
+}
+.main-content {
+  position: absolute;
+  top: 90px;
+  margin-top: 50%;
+  left: 20%; /* Set the left value to the width of the sidebar (20%) */
+  right: 0;
+  bottom: -55px;
+  margin: 10px; /* Add margin to the left to create space between sidebar and content */
+  /* background-color: #F5F7F8; */
+  background-color: lightblue;
+  padding-top: 30px;
+  border-radius: 10px;
+  overflow-y: auto;
+  color: #0c356a;
+  font-size: 20spx;
+  box-shadow: 1px 1px 10px 1px grey;
+}
+/* Add these styles to your CSS file */
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-form {
+  border-width: 12px;
+  border-color: #7b84c8;
+  width: 15%;
+  background-color: rgba(21, 21, 61, 0.949);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-form h2 {
+  font-size: 24px;
+  color: #f5f7f8;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  position: center;
+  width: 55%;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.login-form button {
+  position: centre;
+  font-weight: bolder;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  width: 40%;
+  padding: 10px;
+  background-color: green;
+  box-shadow: 0.5px 0.5px 5px 0.5px blue;
+  color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn button {
+  position: centre;
+  font-weight: bolder;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  width: 40%;
+  padding: 10px;
+  background-color: red;
+  box-shadow: 0.5px 0.5px 5px 0.5px blue;
+  color: rgb(255, 255, 255);
+  border-color: rgb(252, 252, 252);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message {
+  font-weight: bolder;
+  width: 95%;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.close-button {
+  color: #ffffff;
+  position: fixed;
+  bottom: 70%;
+  right: 42%;
+  cursor: pointer;
+  z-index: 1;
+}
+.close-button svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto;
+}
+.close-button:hover {
+  color: red; /* Change the color on hover if desired */
+}
+.homepage {
+  height: 96%;
+  margin: auto;
+  width: 80%;
+  position: center;
+  background-color: white;
+  border-radius: 30px;
+  overflow-y: auto;
+  color: #0c356a;
+  font-weight: bold;
+  box-shadow: 1px 1px 10px 1px royalblue;
+}
+.homepage button2 {
+  margin: 5px;
+  padding: 5px;
+  background-color: green;
+  color: white;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px 1px palegreen;
+}
+.homepage-footer {
+  position: relative;
+  display: block;
+  background-color: #6c00ff;
+  margin-top: 40%;
+  white-space: nowrap;
+  overflow: hidden;
+  color: whitesmoke;
+}
+
+.first-slide {
+  animation: marquee 10s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.admindashboard {
+  height: 590px;
+  margin: auto;
+  /* margin-bottom: 400px; */
+  width: 80%;
+  position: center;
+  background-color: white;
+  border-radius: 30px;
+  overflow-y: auto;
+  color: #0c356a;
+  font-weight: bold;
+  box-shadow: 1px 1px 10px 1px royalblue;
+}
+.card-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding-top: 0%;
+}
+
+.card1 {
+  height: 150px;
+  background-color: #00a9ff;
+  border-radius: 10%;
+  border: 1px solid white;
+  margin: 20px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  width: 120px;
+  box-shadow: 1px 1px 10px 1px #00a9ff;
+}
+.card2 {
+  height: 150px;
+  background-color: #0802a3;
+  border-radius: 10%;
+  border: 1px solid white;
+  margin: 20px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  width: 120px;
+  box-shadow: 1px 1px 10px 1px #0802a3;
+}
+.card3 {
+  height: 150px;
+  background-color: #6c00ff;
+  border-radius: 10%;
+  border: 1px solid white;
+  margin: 20px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  width: 120px;
+  box-shadow: 1px 1px 10px 1px #6c00ff;
+}
+.card4 {
+  height: 150px;
+  background-color: #362fd9;
+  border-radius: 10%;
+  border: 1px solid white;
+  margin: 20px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  width: 120px;
+  box-shadow: 1px 1px 10px 1px #362fd9;
+}
+.cardinfo {
+  height: 100px;
+}
+.value {
+  display: flex;
+  justify-content: center;
+}
+.icon {
+  background-color: transparent;
+  border-radius: 50%;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+}
+.add-service {
+  margin-inline-start: 28%;
+  width: 40%;
+  position: absolute;
+  background-color: white;
+  border-radius: 30px;
+  overflow-y: auto;
+  color: #0c356a;
+  font-weight: bold;
+  box-shadow: 1px 1px 10px 1px royalblue;
+}
+
+.add-service-form h2 {
+  position: center;
+  font-size: 24px;
+  color: #0c356a;
+  margin-bottom: 20px;
+}
+
+.add-service-form form {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.add-service-form input {
+  position: center;
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: lightblue;
+}
+
+.custom-file-upload {
+  display: flex;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border-radius: 20px;
+  font-size: small;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 10px 1px gray;
+}
+
+.custom-file-upload input {
+  /* display: ; */
+  color: #0c356a;
+  font-weight: bold;
+}
+.add-service-form button1 {
+  font-weight: bold;
+  margin-top: 50px;
+  margin: 5px;
+  width: 40%;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: 5pt;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px 1px gray;
+}
+.add-service-form button2 {
+  font-weight: bold;
+  margin-top: 50px;
+  margin: 5px;
+  width: 40%;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: 5pt;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px 1px gray;
+}
